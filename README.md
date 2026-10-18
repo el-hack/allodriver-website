@@ -15,7 +15,9 @@ dans `package-lock.json`.
 
 ## Lancer le projet
 
-Node.js 24 LTS est requis (`.nvmrc` fourni), avec NPM 11. Les installations effectuées
+Node.js 24 LTS est requis (`.nvmrc` fourni), avec NPM 11.6.2. La version exacte est
+épinglée dans `package.json` afin que les plateformes de build utilisent le même gestionnaire
+de paquets. Les installations effectuées
 avec une autre version sont volontairement refusées afin de garder des builds identiques
 en local, en CI et en production.
 
