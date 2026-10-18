@@ -10,11 +10,14 @@ Projet source complet de la landing page AlloDriver, avec le design arrondi : or
 - `next/image` pour les images et `next/font/local` pour Manrope.
 - Tests unitaires avec le runner natif de Node.js.
 
-Les versions exactes installées sont verrouillées dans `package-lock.json`.
+Le projet utilise exclusivement NPM. Les versions exactes installées sont verrouillées
+dans `package-lock.json`.
 
 ## Lancer le projet
 
-Node.js 24 LTS recommandé (`.nvmrc` fourni) ; Node.js 22.12 ou plus récent requis par ce projet.
+Node.js 24 LTS est requis (`.nvmrc` fourni), avec NPM 11. Les installations effectuées
+avec une autre version sont volontairement refusées afin de garder des builds identiques
+en local, en CI et en production.
 
 ```sh
 npm ci
@@ -111,7 +114,10 @@ Une utilisation commerciale avec réservation nécessite un inventaire, une API 
 
 ## Déploiement
 
-Ce projet peut être déployé sur Vercel ou sur un hébergement Node.js compatible avec Next.js : installer les dépendances, lancer la compilation puis `npm start`. La configuration courante utilise le runtime Next.js et son optimisation d’images. Elle ne correspond pas à un simple dossier statique à déposer par FTP.
+Ce projet peut être déployé sur Vercel ou sur un hébergement Node.js 24 compatible avec
+Next.js. Utiliser `npm ci`, puis `npm run build` et `npm start`. La configuration courante
+utilise le runtime Next.js et son optimisation d’images. Elle ne correspond pas à un simple
+dossier statique à déposer par FTP.
 
 La livraison de cette archive ne remplace pas la version de démonstration déjà hébergée avec Sites. Les ressources sont locales ; aucun appel réseau à Google Fonts n’est nécessaire au lancement ou à la compilation.
 
